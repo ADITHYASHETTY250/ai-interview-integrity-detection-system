@@ -1,0 +1,84 @@
+{
+  "session": {
+    "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+    "duration_seconds": 31.2,
+    "num_frames": 936,
+    "fps": 30.0,
+    "alerts": [
+      {
+        "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+        "timestamp": 0.0,
+        "frame_index": 0,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+        "timestamp": 0.16666666666666666,
+        "frame_index": 5,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+        "timestamp": 0.3333333333333333,
+        "frame_index": 10,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+        "timestamp": 0.5,
+        "frame_index": 15,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      }
+    ]
+  },
+  "verdict": "CLEAN",
+  "alerts": [
+    {
+      "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+      "timestamp": 0.0,
+      "frame_index": 0,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+      "timestamp": 0.16666666666666666,
+      "frame_index": 5,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+      "timestamp": 0.3333333333333333,
+      "frame_index": 10,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "d50ddde3d2be4eb790da0df0a031668e",
+      "timestamp": 0.5,
+      "frame_index": 15,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    }
+  ],
+  "scores": {
+    "video": 0.0,
+    "audio": 100.0,
+    "overall": 30.0
+  },
+  "audio": null,
+  "generated_at": "2026-01-28T15:05:36.327748"
+}

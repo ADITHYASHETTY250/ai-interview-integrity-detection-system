@@ -1,0 +1,92 @@
+{
+  "session": {
+    "session_id": "df54cb90165a4772bd5081685432cad1",
+    "duration_seconds": 31.2,
+    "num_frames": 936,
+    "fps": 30.0,
+    "alerts": [
+      {
+        "session_id": "df54cb90165a4772bd5081685432cad1",
+        "timestamp": 0.0,
+        "frame_index": 0,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_0.jpg",
+        "details": {}
+      },
+      {
+        "session_id": "df54cb90165a4772bd5081685432cad1",
+        "timestamp": 0.16666666666666666,
+        "frame_index": 5,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_5.jpg",
+        "details": {}
+      },
+      {
+        "session_id": "df54cb90165a4772bd5081685432cad1",
+        "timestamp": 0.3333333333333333,
+        "frame_index": 10,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_10.jpg",
+        "details": {}
+      },
+      {
+        "session_id": "df54cb90165a4772bd5081685432cad1",
+        "timestamp": 0.5,
+        "frame_index": 15,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_15.jpg",
+        "details": {}
+      }
+    ]
+  },
+  "verdict": "CLEAN",
+  "alerts": [
+    {
+      "session_id": "df54cb90165a4772bd5081685432cad1",
+      "timestamp": 0.0,
+      "frame_index": 0,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_0.jpg",
+      "details": {}
+    },
+    {
+      "session_id": "df54cb90165a4772bd5081685432cad1",
+      "timestamp": 0.16666666666666666,
+      "frame_index": 5,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_5.jpg",
+      "details": {}
+    },
+    {
+      "session_id": "df54cb90165a4772bd5081685432cad1",
+      "timestamp": 0.3333333333333333,
+      "frame_index": 10,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_10.jpg",
+      "details": {}
+    },
+    {
+      "session_id": "df54cb90165a4772bd5081685432cad1",
+      "timestamp": 0.5,
+      "frame_index": 15,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "image_path": "D:\\ai-interview-integrity-detection-system\\logs\\sessions\\evidence\\df54cb90165a4772bd5081685432cad1\\face_missing_15.jpg",
+      "details": {}
+    }
+  ],
+  "scores": {
+    "video": 0.0,
+    "audio": 100.0,
+    "overall": 30.0
+  },
+  "audio": null,
+  "generated_at": "2026-01-28T15:18:51.284347"
+}

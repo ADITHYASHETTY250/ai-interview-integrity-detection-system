@@ -1,0 +1,85 @@
+{
+  "session": {
+    "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+    "duration_seconds": 31.2,
+    "num_frames": 936,
+    "fps": 30.0,
+    "alerts": [
+      {
+        "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+        "timestamp": 0.0,
+        "frame_index": 0,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+        "timestamp": 0.16666666666666666,
+        "frame_index": 5,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+        "timestamp": 0.3333333333333333,
+        "frame_index": 10,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      },
+      {
+        "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+        "timestamp": 0.5,
+        "frame_index": 15,
+        "type": "FACE_MISSING",
+        "severity": "medium",
+        "details": {}
+      }
+    ]
+  },
+  "alerts": [
+    {
+      "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+      "timestamp": 0.0,
+      "frame_index": 0,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+      "timestamp": 0.16666666666666666,
+      "frame_index": 5,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+      "timestamp": 0.3333333333333333,
+      "frame_index": 10,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    },
+    {
+      "session_id": "52e605bb82cb4837ac9890bbabedeb8a",
+      "timestamp": 0.5,
+      "frame_index": 15,
+      "type": "FACE_MISSING",
+      "severity": "medium",
+      "details": {}
+    }
+  ],
+  "scores": {
+    "video": 0.0,
+    "audio": 100.0,
+    "overall": 30.0
+  },
+  "audio": {
+    "speaker_consistency_score": null
+  },
+  "generated_at": "2026-01-27T23:47:20.652303"
+}

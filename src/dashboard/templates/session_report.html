@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session Report</title>
+
+<style>
+body {
+  font-family: system-ui;
+  background:#0f172a;
+  color:#e5e7eb;
+  margin:0;
+}
+header {
+  background:#020617;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+a { color:#22c55e; text-decoration:none; font-weight:600; }
+main { max-width:1100px; margin:24px auto; padding:0 24px; }
+
+.card {
+  background:#020617;
+  border:1px solid #1f2937;
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:16px;
+}
+
+.verdict {
+  text-align:center;
+  font-size:1.4rem;
+  font-weight:700;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:16px;
+}
+.CLEAN { background:#064e3b; }
+.SUSPICIOUS { background:#78350f; }
+.CHEATING { background:#7f1d1d; }
+
+/* 🔥 TABLE FIX */
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.85rem;
+  table-layout: fixed;
+}
+
+th, td {
+  padding:10px 8px;
+  border-bottom:1px solid #1f2937;
+  vertical-align:middle;
+}
+
+th {
+  color:#9ca3af;
+  font-weight:600;
+  text-align:center;
+}
+
+/* Column widths */
+.col-time   { width:15%; text-align:center; }
+.col-frame  { width:15%; text-align:center; }
+.col-type   { width:40%; text-align:left;  }
+.col-sev    { width:15%; text-align:center; }
+
+.badge {
+  padding:4px 12px;
+  border-radius:999px;
+  font-size:0.75rem;
+  display:inline-block;
+}
+.high { background:#7f1d1d; }
+.medium { background:#78350f; }
+
+video {
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Session {{ session.session_id }}</h1>
+  <a href="{{ url_for('dashboard') }}">← Back</a>
+</header>
+
+<main>
+
+<!-- VERDICT -->
+<div class="verdict {{ verdict }}">
+  FINAL VERDICT: {{ verdict }}
+</div>
+
+<!-- VIDEO -->
+<div class="card">
+  <h3>Exam Recording</h3>
+  <video controls>
+    <source src="{{ url_for('serve_video', filename=video_file) }}" type="video/mp4">
+  </video>
+  <p style="font-size:0.75rem;color:#9ca3af">
+    Use alert timestamps to verify suspicious moments
+  </p>
+</div>
+
+<!-- SESSION INFO -->
+<div class="card">
+  <h3>Session Summary</h3>
+  <p>Duration: {{ '%.1f'|format(session.duration_seconds) }} sec</p>
+  <p>Frames: {{ session.num_frames }}</p>
+  <p>FPS: {{ '%.1f'|format(session.fps) }}</p>
+</div>
+
+<!-- SCORES -->
+<div class="card">
+  <h3>Integrity Scores</h3>
+  <p>Video Score: <b>{{ scores.video }}</b></p>
+  <p>Audio Score: <b>{{ scores.audio }}</b></p>
+  <p>Overall Score: <b>{{ scores.overall }}</b></p>
+</div>
+
+<!-- ALERTS -->
+<div class="card">
+  <h3>Alerts ({{ alerts|length }})</h3>
+
+{% if alerts %}
+<table>
+  <thead>
+    <tr>
+      <th class="col-time">Time (s)</th>
+      <th class="col-frame">Frame</th>
+      <th class="col-type">Type</th>
+      <th class="col-sev">Severity</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in alerts %}
+    <tr>
+      <td class="col-time">{{ '%.2f'|format(a.timestamp) }}</td>
+      <td class="col-frame">{{ a.frame_index }}</td>
+      <td class="col-type">{{ a.type }}</td>
+      <td class="col-sev">
+        <span class="badge {{ a.severity }}">{{ a.severity }}</span>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No suspicious activity detected 🎉</p>
+{% endif %}
+</div>
+
+</main>
+</body>
+</html>

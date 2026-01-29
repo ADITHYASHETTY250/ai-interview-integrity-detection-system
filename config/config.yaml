@@ -1,0 +1,79 @@
+# =========================================================
+# AI Interview / Exam Integrity Detection – Configuration
+# =========================================================
+
+video:
+  fps: 30
+
+detection:
+
+  # -------------------------------
+  # Face detection
+  # -------------------------------
+  face:
+    enabled: true
+    detection_interval: 5
+    min_confidence: 0.80
+
+  # -------------------------------
+  # Eye / gaze tracking
+  # -------------------------------
+  eyes:
+    enabled: true
+    gaze_threshold: 2
+    blink_threshold: 0.30
+    consecutive_frames: 3
+
+  # -------------------------------
+  # Mouth movement (talking / whisper)
+  # -------------------------------
+  mouth:
+    enabled: true
+    movement_threshold: 3
+
+  # -------------------------------
+  # Multiple faces
+  # -------------------------------
+  multi_face:
+    enabled: true
+    alert_threshold: 5
+
+  # -------------------------------
+  # Object detection (VERY HEAVY)
+  # -------------------------------
+  objects:
+    enabled: false        # 🔥 TURN OFF by default (FAST)
+    min_confidence: 0.65
+    max_fps: 3            # lower = faster
+    labels:
+      - cellphone
+      - mobile phone
+      - book
+      - notebook
+      - paper
+
+# =========================================================
+# Audio integrity (OPTIONAL)
+# =========================================================
+
+audio_monitoring:
+  enabled: false          # 🔥 OFF unless needed
+  sample_rate: 16000
+  chunk_seconds: 3
+  similarity_threshold: 0.75
+
+# =========================================================
+# Scoring weights
+# =========================================================
+
+scoring:
+  video_weight: 0.8
+  audio_weight: 0.2
+
+# =========================================================
+# Logging & Reports
+# =========================================================
+
+logging:
+  save_json: true
+  save_screenshots: false   # 🔥 saves disk + speed
