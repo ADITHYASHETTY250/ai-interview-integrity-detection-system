@@ -11,11 +11,11 @@ The system generates:
 ai-interview-integrity-detection-system/
 │
 ├── config/
-│   └── config.yaml               # Detection & performance configuration
+│   └── config.yaml                 # Detection & performance configuration
 │
 ├── src/
 │   ├── dashboard/
-│   │   ├── app.py                # Flask web application
+│   │   ├── app.py                  # Flask web application
 │   │   ├── templates/
 │   │   │   ├── dashboard.html
 │   │   │   ├── upload.html
@@ -35,16 +35,16 @@ ai-interview-integrity-detection-system/
 │   ├── analysis/
 │   │   └── scoring.py
 │   │
-│   └── offline_processor.py      # Core AI processing engine
+│   └── offline_processor.py        # Core AI processing engine
 │
-├── uploads/                      # Uploaded video & audio files
+├── uploads/                        # Uploaded video & audio files
 │
 ├── logs/
 │   └── sessions/
-│       ├── <session_id>.json     # Final report per session
+│       ├── <session_id>.json       # Final report per session
 │       └── evidence/
 │           └── <session_id>/
-│               └── frame_*.jpg   # Proof frames (cheating evidence)
+│               └── frame_*.jpg     # Proof frames (cheating evidence)
 │
 ├── requirements.txt
 └── README.md
