@@ -9,7 +9,7 @@ The system generates:
 📁 Project Structure
 
 ai-interview-integrity-detection-system/
-│
+|
 ├── config/
 │   └── config.yaml                 # Detection & performance configuration
 │
