@@ -24,3 +24,5 @@ scikit-learn==1.7.2
 
 PyYAML==6.0.3
 Pillow==10.2.0
+
+gunicorn==23.0.0
