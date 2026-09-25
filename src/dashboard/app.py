@@ -73,6 +73,5 @@ def serve_video(filename):
 def serve_evidence(session_id, filename):
     return send_from_directory(LOGS_DIR / "evidence" / session_id, filename)
 
-
 if __name__ == "__main__":
     app.run(debug=True)
